@@ -1,32 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 12:56:20 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/12/19 20:44:24 by gkrusta          ###   ########.fr       */
+/*   Created: 2023/12/19 20:41:46 by gkrusta           #+#    #+#             */
+/*   Updated: 2023/12/19 20:49:34 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONEBOOK_HPP
-#define PHONEBOOK_HPP
+#include "contact.hpp"
 
-#include <iostream>
-#include <iomanip>
-#include <string>
-
-class	PhoneBook
+/* void	Contact::addContact(phoneBook& book)
 {
-	public:
-		void	searchContact();
-		void	addContact();
-		void	displayAllContacts();
-		void	
-	private:
-		contact _contact[8];
-		int		nr_contacts;
-};
-
-#endif
+	if (book.nr)
+} */

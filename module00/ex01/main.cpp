@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/19 12:56:16 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/12/19 20:52:37 by gkrusta          ###   ########.fr       */
+/*   Created: 2023/12/19 20:18:41 by gkrusta           #+#    #+#             */
+/*   Updated: 2023/12/19 20:43:16 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
-
-void	delete_oldest(contact contact)
+int	main()
 {
-	_firstName.clear();
-	_lastName.clear();
-	_nickname.clear();
-	_number.clear();
-	_secret.clear();
-}
+	std::string input;
+	phoneBook	book;
 
-void	Contact::addContact(phoneBook& book)
-{
-	if (book.nr_contacts < 8)
+	std::cout << "Welcome to Phonebook" << std::endl;
+	std::cout << "Chose 1 of the options: 1.ADD  2.SEARCH  3.EXIT" << std::endl;
+	std::getline(std::cin, input);
+	std::cout << input << std::endl;
+	while (1)
 	{
-		
+		if(input == "ADD")
+		{
+			book.createArray();
+		}
+		else
+			return (0);
 	}
-	else
-		delete_oldest(book._contact[0]);
+	return (0);
+/* 	for (int i = 0; i < 7; i++)
+		std::cout << std::setw(10); */
 }

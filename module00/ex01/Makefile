@@ -4,7 +4,7 @@ C++ = c++ -std=c++98
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-SRC = megaphone.cpp
+SRC = phonebook.cpp
 
 OBJ = $(SRC:.c=.o)
 
