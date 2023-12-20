@@ -6,9 +6,11 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:18:41 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/12/19 20:43:16 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/12/20 16:38:24 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "phonebook.hpp"
 
 int	main()
 {
@@ -23,7 +25,7 @@ int	main()
 	{
 		if(input == "ADD")
 		{
-			book.createArray();
+			book.addContact();
 		}
 		else
 			return (0);

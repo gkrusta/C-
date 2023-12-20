@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 19:00:01 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/12/19 20:41:27 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/12/20 14:42:18 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,17 @@
 class contact
 {
 	public:
-		//getters
+		//getters- to acces the private varibles (atributes)
 		std::string	getFirstName();
 		std::string	getLastName();
 		std::string	getNickname();
 		std::string	getNumber();
 		std::string	getSecret();
-		//setters
+		//setters- to give a value to the atributes
 		void	setFirstName();
 		void	setLastName();
 		void	setNickname();
-		void	setNumber();
+		void	setNickname();
 		void	setSecret();
 	private:
 		std::string _firstName;

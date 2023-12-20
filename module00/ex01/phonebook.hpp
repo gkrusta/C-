@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:56:20 by gkrusta           #+#    #+#             */
-/*   Updated: 2023/12/19 20:44:24 by gkrusta          ###   ########.fr       */
+/*   Updated: 2023/12/20 16:13:35 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include "contact.hpp"
 
 class	PhoneBook
 {
