@@ -6,33 +6,33 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:41:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/04 09:55:09 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/04 11:40:51 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 
-std::string	Contact::getFirstName() {
+std::string	Contact::getFirstName(void) {
 	return (_firstName);
 }
 
-std::string	Contact::getLastName() {
+std::string	Contact::getLastName(void) {
 	return (_lastName);
 }
 
-std::string	Contact::getNickname() {
+std::string	Contact::getNickname(void) {
 	return (_nickname);
 }
 
-std::string	Contact::getPhoneNumber() {
+std::string	Contact::getPhoneNumber(void) {
 	return (_phoneNumber);
 }
 
-std::string	Contact::getSecret() {
+std::string	Contact::getSecret(void) {
 	return (_secret);
 }
 
-void	Contact::setFirstName() {
+void	Contact::setFirstName(void) {
 	std::string str;
 
 	while (1)
