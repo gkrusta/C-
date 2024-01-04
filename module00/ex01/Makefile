@@ -4,9 +4,9 @@ C++ = c++ -std=c++98
 FLAGS = -Wall -Wextra -Werror
 RM = rm -f
 
-SRC = phonebook.cpp
+SRC = PhoneBook.cpp Contact.cpp main.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 

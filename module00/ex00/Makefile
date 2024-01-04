@@ -6,7 +6,7 @@ RM = rm -f
 
 SRC = megaphone.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 

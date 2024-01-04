@@ -6,32 +6,80 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:56:16 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/02 18:07:41 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/04 10:34:28 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
-
-/* void	PhoneBook::deleteOldest()
-{
-	for (int i = 0; i < 8; i++)
-		t_contact[i] == _contact[i + 1];
-} */
+#include "PhoneBook.hpp"
 
 PhoneBook::PhoneBook(void) {
-	this->_counter = 0;
 	std::cout << "Welcome to Phonebook" << std::endl;
-	std::cout << "Chose 1 of the options: 1.ADD  2.SEARCH  3.EXIT" << std::endl;
+	this->_counter = 0;
+	this->_nrOfContacts = 0;
 }
 
-void	PhoneBook::addContact()
+void	PhoneBook::addContact(void)
 {
 	if (_counter > 7)
-		std::cout << "Overwritting info about:" << contact[_counter % 8].getFirstName << std::endl;
-	contact[_counter % 8].setFirstName();
-	contact[_counter % 8].setLastName();
-	contact[_counter % 8].setNickame();
-	contact[_counter % 8].setPhoneNumber();
-	contact[_counter % 8].setDarkestSecret();
+		std::cout << "Overwritting info about:" << _contact[_counter % 8].getFirstName() << std::endl;
+	_contact[_counter % 8].setFirstName();
+	_contact[_counter % 8].setLastName();
+	_contact[_counter % 8].setNickname();
+	_contact[_counter % 8].setPhoneNumber();
+	_contact[_counter % 8].setSecret();
+	if (_counter < 8)
+		_nrOfContacts++;
 	_counter++;
+}
+
+std::string	PhoneBook::truncateString(std::string str) {
+	unsigned size = str.size();
+
+	if (size > 10) {
+		std::string newStr = str.substr(0, 9);
+		newStr.insert(9, ".");
+		return (newStr);
+	}
+	else
+		return (str);
+}
+
+void	PhoneBook::displayAllContacts() {
+	std::cout << "|" << std::setw(10) << "index" << "|";
+	std::cout << std::setw(10) << "first name" << "|";
+	std::cout << std::setw(10) << "last name" << "|";
+	std::cout << std::setw(10) << "nickanme" << "|" << std::endl;
+
+	for (int i = 0; i < _nrOfContacts; i++) {
+		std::cout << "|" << std::setw(10) << i + 1 << "|";
+		std::cout << std::setw(10) << truncateString(_contact[i].getFirstName()) << "|";
+		std::cout << std::setw(10) << truncateString(_contact[i].getLastName()) << "|";
+		std::cout << std::setw(10) << truncateString(_contact[i].getNickname()) << "|" << std::endl;
+	}
+}
+
+
+
+void	PhoneBook::searchContact() {
+	if (_nrOfContacts > 0) {
+		int		index;
+		Contact	selectedContact;
+
+		displayAllContacts();
+		std::cout << "Chose one of the following index to display the corresponding contact: ";
+		std::cin >> index;
+		if (index > 0 && index <= _nrOfContacts) {
+			selectedContact = _contact[index - 1];
+			std::cout << "Displaying information about index " << index << ":" << std::endl;
+			std::cout << "First name: " << selectedContact.getFirstName() << std::endl;
+			std::cout << "Last name: " << selectedContact.getLastName() << std::endl;
+			std::cout << "Nickname: " << selectedContact.getNickname() << std::endl;
+			std::cout << "Phone number: " << selectedContact.getPhoneNumber() << std::endl;
+			std::cout << "Darkest secret: " << selectedContact.getPhoneNumber() << std::endl;
+		}
+		else
+			std::cout << "There is no such an index!" << std::endl;
+	}
+	else
+		std::cout << "There are no contacts in the phonebook!" << std::endl;
 }

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:56:20 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/02 18:08:16 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/03 16:32:34 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,20 @@
 #include <string>
 #include <algorithm>
 #include <cctype>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 class	PhoneBook
 {
 	public:
-		void	addContact();
-		void	searchContact();
-		void	displayAllContacts();
+		void	addContact(void);
+		void	searchContact(void);
+		void	displayAllContacts(void);
 		PhoneBook(void);
 	private:
-		contact _contact[8];
+		std::string	truncateString(std::string str);
+		Contact _contact[8];
 		int		_counter;
+		int		_nrOfContacts;
 };
 
 #endif
