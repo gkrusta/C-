@@ -12,6 +12,10 @@
 #ifndef __ACCOUNT_H__
 #define __ACCOUNT_H__
 
+#include <iostream>
+#include <iomanip>
+#include <string>
+
 // ************************************************************************** //
 //                               Account Class                                //
 // ************************************************************************** //
@@ -52,7 +56,7 @@ private:
 	int				_nbDeposits;
 	int				_nbWithdrawals;
 
-	Account( void );
+	Account( void ); //never using this private method
 
 };
 
