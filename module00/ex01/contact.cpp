@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:41:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/04 11:40:51 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/08 15:12:43 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	Contact::setFirstName(void) {
 	while (1)
 	{
 		std::cout << "First name: ";
-		std::cin >> str;
+		std::getline(std::cin, str, '\n');
 		if (str.empty())
 			std::cout << "A field cannot be empty" << std::endl;
 		else {
@@ -54,7 +54,7 @@ void	Contact::setLastName(void) {
 	while (1)
 	{
 		std::cout << "Last name: ";
-		std::cin >> str;
+		std::getline(std::cin, str, '\n');
 		if (str.empty())
 			std::cout << "A field cannot be empty" << std::endl;
 		else {
@@ -70,7 +70,7 @@ void	Contact::setNickname(void) {
 	while (1)
 	{
 		std::cout << "Nickname: ";
-		std::cin >> str;
+		std::getline(std::cin, str, '\n');
 		if (str.empty())
 			std::cout << "A field cannot be empty" << std::endl;
 		else {
@@ -94,7 +94,7 @@ void	Contact::setPhoneNumber(void) {
 	while (1)
 	{
 		std::cout << "Phone number: ";
-		std::cin >> str;
+		std::getline(std::cin, str, '\n');
 		if (str.empty())
 			std::cout << "A field cannot be empty" << std::endl;
 		else if (!isNumber(str))
@@ -112,7 +112,7 @@ void	Contact::setSecret(void) {
 	while (1)
 	{
 		std::cout << "Darkest secret: ";
-		std::cin >> str;
+		std::getline(std::cin, str, '\n');
 		if (str.empty())
 			std::cout << "A field cannot be empty" << std::endl;
 		else {

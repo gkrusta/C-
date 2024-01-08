@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:18:41 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/03 18:55:14 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/08 14:48:23 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main()
 	{
 		std::cout << "Chose 1 of the options: 1.ADD  2.SEARCH  3.EXIT" << std::endl;
 		//std::cout << "input is " << input << std::endl;
-		std::cin >> input;
+		std::getline(std::cin, input);
 		if (input == "ADD")
 			book.addContact();
 		else if (input == "SEARCH")
