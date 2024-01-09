@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:56:20 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/03 16:32:34 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/09 14:36:14 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ class	PhoneBook
 		PhoneBook(void);
 	private:
 		std::string	truncateString(std::string str);
+		bool	isIndex(std::string nr);
 		Contact _contact[8];
 		int		_counter;
 		int		_nrOfContacts;

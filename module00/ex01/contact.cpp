@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.cpp                                        :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 20:41:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/08 15:12:43 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/09 14:28:10 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	Contact::setNickname(void) {
 }
 
 bool	Contact::isNumber(std::string nr) {
-	for(unsigned long i = 0; i < nr.length(); i++) {
+	for (unsigned long i = 0; i < nr.length(); i++) {
 		if (!(nr[i] >= '0' && nr[i] <= '9'))
 			return false;
 	}

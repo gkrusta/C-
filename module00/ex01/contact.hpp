@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 19:00:01 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/03 16:42:42 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/09 14:30:44 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ class Contact
 		void	setNickname();
 		void	setPhoneNumber();
 		void	setSecret();
-		bool	isNumber(std::string nr);
 	private:
+		bool	isNumber(std::string nr);
 		std::string _firstName;
 		std::string _lastName;
 		std::string _nickname;

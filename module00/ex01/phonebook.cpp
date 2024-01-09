@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/19 12:56:16 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/01/08 15:23:51 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/01/09 14:28:33 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,13 @@ void	PhoneBook::displayAllContacts() {
 	}
 }
 
-
+bool	PhoneBook::isIndex(std::string nr) {
+	for (unsigned long i = 0; i < nr.length(); i++) {
+		if (!(nr[i] >= '0' && nr[i] <= '9'))
+			return false;
+	}
+	return true;
+}
 
 void	PhoneBook::searchContact() {
 	if (_nrOfContacts > 0) {
@@ -68,7 +74,7 @@ void	PhoneBook::searchContact() {
 		displayAllContacts();
 		std::cout << "Chose one of the following index to display the corresponding contact: ";
 		std::getline(std::cin, strIndex, '\n');
-		if (!strIndex.empty()) {
+		if (!strIndex.empty() && isIndex(strIndex)) {
 			int	index = std::stoi(strIndex);
 			if (index > 0 && index <= _nrOfContacts) {
 				selectedContact = _contact[index - 1];
