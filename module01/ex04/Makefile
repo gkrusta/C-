@@ -1,4 +1,4 @@
-NAME = weapon_club
+NAME = str_replace
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98

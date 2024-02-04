@@ -6,9 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:44:53 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/02 17:45:32 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/04 14:16:40 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
