@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:47:49 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/04 14:24:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 13:08:24 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,4 @@ void	HumanB::attack(void) {
 		std::cout << name << " attacks with their " << humanWeapon->getType() << std::endl;
 	else
 		std::cout << name << " attacks with no weapon! " << std::endl;
-
 }

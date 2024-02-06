@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 15:19:14 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/05 13:09:41 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 16:42:54 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,21 @@
 #include <string>
 #include <iostream>
 
-void replaceInLine(std::string& line, std::string s1, std::string s2) {
-	std::size_t found = line.find(s1);
+void	replaceInLine(std::string& line, std::string s1, std::string s2) {
+	if (!s1.empty()) {
+		std::size_t found = line.find(s1);
 
-	while (found != std::string::npos) {
-		line.erase(found, s1.length());
-		line.insert(found, s2);
-		found = line.find(s1, found + s2.length());
+		while (found != std::string::npos) {
+			line.erase(found, s1.length());
+			line.insert(found, s2);
+			found = line.find(s1, found + s2.length());
+		}
 	}
 }
 
 int	main(int argc, char **argv) {
 	if (argc == 4) {
-		std::string	infileName = argv[1];
+		std::string		infileName = argv[1];
 		std::ifstream	infile(infileName);
 
 		if (!infile.is_open()) {
@@ -47,6 +49,6 @@ int	main(int argc, char **argv) {
 		outfile.close();
 	}
 	else
-		std::cout << "Program takes 3 parameters in the following order: a filename and 2 strings, s1 and s2." << std::endl;
+		std::cout << "Program takes 3 parameters: a filename and 2 strings, s1 and s2." << std::endl;
 	return (0);
 }

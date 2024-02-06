@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 13:07:26 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/02 16:56:23 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 13:22:12 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,6 @@ int	main(void)
 	std::string	commonName = "Homer";
 	Zombie	*zombie = zombieHorde(hordSize, commonName);
 	delete[] zombie;
+
 	return (0);
 }

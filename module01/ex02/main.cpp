@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 16:57:34 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/02 17:34:01 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 13:18:08 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ int	main(void) {
 	std::cout << "The value pointed to by stringPTR: " << *stringPTR << std::endl;
 	std::cout << "The value pointed to by stringREF: " << stringREF << std::endl;
 	return (0);
-}	
+}

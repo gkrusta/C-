@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:47:58 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/04 14:24:55 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 13:08:41 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ class	Weapon
 		const	std::string& getType(void);
 		void	setType(std::string _newWeapon);
 		Weapon(std::string _initialType);
-
 	private:
 		std::string type;
 };

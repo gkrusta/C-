@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 10:47:27 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/02 16:54:05 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/06 13:20:36 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
-#include <string>
 
 class	Zombie
 {
