@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:48:59 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/07 16:01:51 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/07 16:27:49 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 #define FIXED_HPP
 
 #include <iostream>
+#include <cmath>
 
 class	Fixed {
 	public:
-		Fixed();
+		Fixed(const int nb);
+		Fixed(float nb);
 		~Fixed();
 		Fixed(const Fixed& other);
 		Fixed&	operator=(const Fixed& other);
