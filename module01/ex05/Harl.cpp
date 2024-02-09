@@ -6,17 +6,22 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:19:00 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/06 12:54:10 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/09 13:21:46 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
 
 Harl::Harl() {
-	messages[0] = "DEBUG";
-	messages[1] = "INFO";
-	messages[2] = "WARNING";
-	messages[3] = "ERROR";
+	messages[0] = "UNKNOWN";
+	messages[1] = "DEBUG";
+	messages[2] = "INFO";
+	messages[3] = "WARNING";
+	messages[4] = "ERROR";
+}
+
+void Harl::unknown() {
+	std::cout << "Unknown complaint level." << std::endl;
 }
 
 void Harl::debug() {
@@ -36,13 +41,10 @@ void Harl::error() {
 }
 
 void	Harl::complain(std::string level) {
-	f_arr	f[] = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	f_arr	f[] = {&Harl::unknown, &Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	int	i = 0;
-	while (i < 4 && messages[i] != level) {
+	while (i < 5 && messages[i] != level) {
 		i++;
 	}
-	if (i < 4)
-		(this->*f[i])();
-	else
-		std::cout << "Unknown complaint level" << std::endl;
+	(this->*f[i % 5])();
 }

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:19:00 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/06 12:49:24 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/09 11:18:25 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,22 +21,22 @@ Harl::Harl() {
 
 void Harl::debug() {
 	std::cout << "[ DEBUG ]" << std::endl;
-	std::cout << "Debug message: I am Harl, providing contextual information for debugging.\n" << std::endl;
+	std::cout << "Debug message: I am Harl, providing contextual information for debugging." << std::endl;
 }
 
 void Harl::info() {
 	std::cout << "[ INFO ]" << std::endl;
-	std::cout << "Info message: I am Harl, providing extensive information for program tracing.\n" << std::endl;
+	std::cout << "Info message: I am Harl, providing extensive information for program tracing." << std::endl;
 }
 
 void Harl::warning() {
 	std::cout << "[ WARNING ]" << std::endl;
-	std::cout << "I am Harl, indicating a potential issue that can be handled or ignored.\n" << std::endl;
+	std::cout << "I am Harl, indicating a potential issue that can be handled or ignored." << std::endl;
 }
 
 void Harl::error() {
 	std::cout << "[ ERROR ]" << std::endl;
-	std::cout << "I am Harl, reporting an unrecoverable error requiring manual intervention.\n" << std::endl;
+	std::cout << "I am Harl, reporting an unrecoverable error requiring manual intervention." << std::endl;
 }
 
 
@@ -57,6 +57,6 @@ void	Harl::complain(std::string level) {
 			error();
 			break;
 		case 4:
-			std::cout << "Probably complaining about insignificant problems.\n" << std::endl;
+			std::cout << "Probably complaining about insignificant problems." << std::endl;
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:48:59 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/07 16:27:49 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/09 13:26:22 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 
 class	Fixed {
 	public:
-		Fixed(const int nb);
-		Fixed(float nb);
+		Fixed();
 		~Fixed();
 		Fixed(const Fixed& other);
 		Fixed&	operator=(const Fixed& other);

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 17:47:58 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/06 13:08:41 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/09 11:03:05 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,6 @@
 
 #include <iostream>
 
-class HumanA;
-class HumanB;
 
 class	Weapon
 {

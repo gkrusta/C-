@@ -5,21 +5,22 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 16:48:08 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 17:22:36 by gkrusta          ###   ########.fr       */
+/*   Created: 2024/02/09 13:29:58 by gkrusta           #+#    #+#             */
+/*   Updated: 2024/02/09 17:27:53 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Point.hpp"
 
-int	main( void ) {
-	Fixed a;
-	Fixed b( a );
-	Fixed c;
+int	main(void) {
+	Point	a;
+	Point	b(5,5);
+	Point	c(10,0);
+	Point	p(5,1);
 
-	c = b;
-	std::cout << a.getRawBits() << std::endl;
-	std::cout << b.getRawBits() << std::endl;
-	std::cout << c.getRawBits() << std::endl;
-	return 0;
+	if (bsp(a, b, c, p))
+		std::cout << "The point is inside the triangle" << std::endl;
+	else
+		std::cout << "The point is not inside the triangle" << std::endl;
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 13:18:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/06 12:53:05 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/09 13:17:54 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,8 @@ class	Harl {
 		void	info(void);
 		void	warning(void);
 		void	error(void);
-		std::string	messages[4];
+		void	unknown(void);
+		std::string	messages[5];
 };
 
 typedef	void (Harl::*f_arr)();
