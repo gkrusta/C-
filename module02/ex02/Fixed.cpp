@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:45:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/12 13:16:40 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:50:19 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,7 +124,7 @@ Fixed	Fixed::operator--(int) {
 
 Fixed&	Fixed::min(Fixed& a, Fixed& b) {
 	return (a.getRawBits() < b.getRawBits() ? a : b);
-}
+} 
 
 const Fixed&	Fixed::min(const Fixed& a, const Fixed& b) {
 	return (a.getRawBits() < b.getRawBits() ? a : b);
