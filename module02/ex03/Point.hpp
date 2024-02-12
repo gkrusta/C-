@@ -6,15 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 13:30:42 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 17:52:09 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:19:54 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef POINT_HPP
 #define POINT_HPP
 
-#include <iostream>
-#include <cmath>
 #include "Fixed.hpp"
 
 class	Point {
@@ -31,6 +29,6 @@ class	Point {
 		const Fixed	_y;
 };
 
-bool	bsp(Point const a, Point const b, Point const c, Point const p);
+bool	bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif

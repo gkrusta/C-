@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:45:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 11:41:29 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 12:31:46 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,4 +135,8 @@ Fixed&	Fixed::max(Fixed& a, Fixed& b) {
 
 const Fixed&	Fixed::max(const Fixed& a, const Fixed& b) {
 	return (a.getRawBits() > b.getRawBits() ? a : b);
+}
+
+Fixed	Fixed::toAbs() const {
+	return (_rawBits < 0 ? -_rawBits : _rawBits);
 }

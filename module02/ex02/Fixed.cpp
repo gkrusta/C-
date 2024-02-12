@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:45:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 11:41:29 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:16:40 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ Fixed::Fixed(const Fixed& other) {
 }
 
 Fixed::~Fixed(void) {
+
 }
 
 Fixed&	Fixed::operator=(const Fixed& other) {

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:48:59 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 11:39:16 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 12:31:57 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ class	Fixed {
 		static const Fixed& min(const Fixed& a, const Fixed& b);
 		static Fixed& max(Fixed& a, Fixed& b);
 		static const Fixed& max(const Fixed& a, const Fixed& b);
-
+		Fixed	toAbs() const;
 	private:
 		int					_rawBits;
 		static const int	_fractionalBits = 8;

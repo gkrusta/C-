@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 13:30:35 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/09 17:49:02 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 12:14:44 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Point& Point::operator=(const Point& other) {
 }
 
 Point::~Point() {
+	
 }
 
 Fixed	Point::getX() const {

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:45:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/08 14:20:23 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/12 13:21:51 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ int	Fixed::toInt(void) const {
 
 float	Fixed::toFloat(void) const {
 	return (static_cast<float>(this->_rawBits) / (1 << _fractionalBits));
-
 }
 
 std::ostream	&operator<<(std::ostream& out, const Fixed& fixed) {
