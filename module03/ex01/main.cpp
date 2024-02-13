@@ -6,22 +6,31 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 14:54:04 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/13 15:21:35 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int	main(void) {
-	ClapTrap	humanA("Pablo");
-	ClapTrap	humanB("Enrique");
 
+	std::cout << "===== Testing ClapTrap =====" << std::endl;
+	ClapTrap	humanA("Pablo");
 	humanA.attack("Enrique");
-	humanB.takeDamage(5);
-	humanB.beRepaired(2);
-	humanB.attack("Pablo");
 	humanA.takeDamage(5);
-	humanA.takeDamage(6);
-	humanA.takeDamage(3);
+	humanA.beRepaired(2);
+
+	std::cout << "\n===== Testing ScavTrap =====" << std::endl;
+	ScavTrap	robot("Robot");
+	robot.attack("Zombie");
+	robot.takeDamage(50);
+	robot.takeDamage(60);
+	robot.takeDamage(1);
+	robot.beRepaired(2);
+
+	ScavTrap	robotNew(robot);
+	robot = robotNew;
+	robotNew.takeDamage(5);
+	robotNew.guardGate();
 	return (0);
 }

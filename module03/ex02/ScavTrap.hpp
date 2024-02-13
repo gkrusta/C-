@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 14:54:04 by gkrusta          ###   ########.fr       */
+/*   Created: 2024/02/13 12:08:08 by gkrusta           #+#    #+#             */
+/*   Updated: 2024/02/13 15:28:20 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#ifndef SCAVTRAP_HPP
+#define SCAVTRAP_HPP
 
-int	main(void) {
-	ClapTrap	humanA("Pablo");
-	ClapTrap	humanB("Enrique");
+# include "ClapTrap.hpp"
 
-	humanA.attack("Enrique");
-	humanB.takeDamage(5);
-	humanB.beRepaired(2);
-	humanB.attack("Pablo");
-	humanA.takeDamage(5);
-	humanA.takeDamage(6);
-	humanA.takeDamage(3);
-	return (0);
-}
+class	ScavTrap : public ClapTrap
+{
+	public:
+		ScavTrap();
+		ScavTrap(std::string name);
+		~ScavTrap();
+		ScavTrap(const ScavTrap& other);
+		ScavTrap&	operator=(const ScavTrap& other);
+		void	guardGate();
+};
+
+#endif
