@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 16:38:53 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/14 13:35:35 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,10 @@ int	main(void) {
 	humanB.highFivesGuys();
 
 	std::cout << "\n===== Testing DiamondTrap =====" << std::endl;
+	DiamondTrap		humanC("Koreano");
+	humanC.attack("Leton");
+	humanC.takeDamage(10);
+	humanC.beRepaired(2);
+	humanC.whoAmI();
 	return (0);
 }

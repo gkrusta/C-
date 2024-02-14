@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:06:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 16:38:20 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/14 13:33:47 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "ClapTrap.hpp"
 
-class	FragTrap : public ClapTrap
+class	FragTrap : public virtual ClapTrap
 {
 	public:
 		FragTrap();
