@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/14 13:35:35 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/14 19:12:17 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void) {
 
-	std::cout << "===== Testing ClapTrap =====" << std::endl;
+/* 	std::cout << "===== Testing ClapTrap =====" << std::endl;
 	ClapTrap	humanA("Pablo");
 	humanA.attack("Enrique");
 	humanA.takeDamage(5);
@@ -32,13 +32,13 @@ int	main(void) {
 	humanB.attack("Bart");
 	humanB.takeDamage(200);
 	humanB.beRepaired(2);
-	humanB.highFivesGuys();
+	humanB.highFivesGuys(); */
 
 	std::cout << "\n===== Testing DiamondTrap =====" << std::endl;
 	DiamondTrap		humanC("Koreano");
-	humanC.attack("Leton");
-	humanC.takeDamage(10);
-	humanC.beRepaired(2);
+	humanC.attack("Leton", "DiamondTrap");
+	humanC.takeDamage(1, "DiamondTrap");
+	humanC.beRepaired(2, "DiamondTrap");
 	humanC.whoAmI();
 	return (0);
 }
