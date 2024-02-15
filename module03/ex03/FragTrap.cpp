@@ -6,17 +6,17 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:06:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/14 19:09:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/15 12:10:00 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
 FragTrap::FragTrap(): ClapTrap() {
-/* 	this->_hitPoints = 100;
+	this->_hitPoints = 100;
 	_type = "FragTrap";
 	this->_energyPoints = 100;
-	this->_attackPoints = 30; */
+	this->_attackPoints = 30;
 	std::cout << "FragTrap default constructor called" <<  std::endl;
 }
 

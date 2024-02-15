@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:30:37 by gkrusta          ###   ########.fr       */
+/*   Created: 2024/02/15 19:30:19 by gkrusta           #+#    #+#             */
+/*   Updated: 2024/02/15 20:55:19 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "DiamondTrap.hpp"
+#include "Dog.hpp"
 
-int	main(void) {
-	std::cout << "\n===== Testing DiamondTrap =====" << std::endl;
-	DiamondTrap		humanA("Pablo");
-	DiamondTrap		humanB;
-	DiamondTrap		humanC(humanA);
-	humanA.attack("Enrique", "DiamondTrap");
-	humanB.takeDamage(1, "DiamondTrap");
-	humanB.beRepaired(5, "DiamondTrap");
-	humanA.whoAmI();
-	humanB.whoAmI();
-	humanC.whoAmI();
-	return (0);
+Dog:: Dog(std::string& customType) : Animal(customType.empty() ? "Dog" : customType) {
+	std::cout << "Dog -set type- constructor called" <<  std::endl;
+}
+
+Dog::~Dog() {
+	std::cout << "Dog destructor called" << std::endl;
+}
+
+Dog::getType() {
+	return (_type);
+}
+
+void	Dog::makeSound() {
+	std::cout << "Vau vau..." << std::endl;
 }

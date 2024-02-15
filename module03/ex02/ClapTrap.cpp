@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:19 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 14:54:36 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/15 13:52:02 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		this->_hitPoints -= amount;
 		std::cout << this->_name << " takes damage losing " << amount << " points!" << std::endl;
 	}
-	else if (this->_hitPoints == 0){
+	else if (this->_hitPoints == 0 && this->_energyPoints == 0) {
 		std::cout << this->_name << " can't take damage having no lives and/or no energy :(" << std::endl;
 	}
 	else {

@@ -6,15 +6,12 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:32:58 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/14 19:12:02 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/15 14:02:21 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DIAMONDTRAP_HPP
 #define DIAMONDTRAP_HPP
-
-# include <iostream>
-# include <string>
 
 # include "ClapTrap.hpp"
 # include "ScavTrap.hpp"

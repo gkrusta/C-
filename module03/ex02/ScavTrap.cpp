@@ -6,13 +6,16 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:07:56 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/13 13:29:22 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/15 13:16:01 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(): ClapTrap() {
+	this->_hitPoints = 100;
+	this->_energyPoints = 50;
+	this->_attackPoints = 20;
 	std::cout << "ScavTrap default constructor called" <<  std::endl;
 }
 
