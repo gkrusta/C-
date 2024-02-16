@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:30:38 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 21:24:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/16 16:26:39 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 
 # include "Animal.hpp"
 
-class	Cat : public    Animal
+class	Cat : public	Animal
 {
 	public:
 		Cat();
-		Cat(std::string type);
+		Cat(std::string customType);
 		~Cat();
-/* 		Cat(const Cat& other);
-		Cat&	operator=(const Cat& other); */
-		virtual void	makeSound() const ;
+		Cat(const Cat& other);
+		Cat&	operator=(const Cat& other);
+		void	makeSound() const;
 };
 
 #endif

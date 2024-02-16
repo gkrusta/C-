@@ -6,13 +6,13 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:33:02 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:59:26 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/16 15:55:09 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 # include "DiamondTrap.hpp"
 
-DiamondTrap::DiamondTrap() :  ScavTrap(), FragTrap() {
+DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 	_name = "Unknown";
 	ClapTrap::_name = "Unknown_clap_name";
 	_hitPoints = FragTrap::_hitPoints;
