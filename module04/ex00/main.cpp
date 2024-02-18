@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 16:19:29 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/18 13:19:33 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main()
 	//Virtual functions should be accessed using a pointer or reference of 
 	//base class type to achieve runtime polymorphism.
 	{
-		std::cout << "=====Testing WrongCat=====" << std::endl;
+		std::cout << "=====Testing Dog&Cat=====" << std::endl;
 		const Animal* meta = new Animal("Domasticated animal");
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();

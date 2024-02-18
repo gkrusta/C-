@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   AAAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/15 19:30:43 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/18 14:29:48 by gkrusta          ###   ########.fr       */
+/*   Created: 2024/02/13 15:06:46 by gkrusta           #+#    #+#             */
+/*   Updated: 2024/02/18 16:29:32 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-#define DOG_HPP
+#ifndef ANIMAL_HPP
+#define ANIMAL_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+# include <iostream>
 
-class	Dog : public	Animal
+class	AAnimal
 {
 	public:
-		Dog();
-		Dog(std::string customType);
-		~Dog();
-		Dog(const Dog& other);
-		Dog&	operator=(const Dog& other);
-		void	makeSound() const;
-		void	newIdea(std::string idea);
-		void	printIdeas();
-	private:
-		Brain*	_dogIdeas;
+		AAnimal();
+		AAnimal(std::string type);
+		virtual ~AAnimal();
+		std::string	getType() const;
+		AAnimal(const AAnimal& other);
+		AAnimal&	operator=(const AAnimal& other);
+// In c++ a class is abstract if it has at least one pure virtual member function
+		virtual void	makeSound() const = 0;
+	protected:
+		std::string	_type;
 };
 
 #endif

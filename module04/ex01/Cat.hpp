@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:30:38 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 18:30:30 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/18 14:29:43 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class	Cat : public	Animal
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
 		void	makeSound() const;
+		void	newIdea(std::string idea);
+		void	printIdeas();
 	private:
 		Brain*	_catIdeas;
 };

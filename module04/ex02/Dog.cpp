@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:30:19 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/18 14:32:34 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/18 16:34:33 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Dog::Dog() {
 	_dogIdeas = new Brain;
 }
 
-Dog:: Dog(std::string customType) : Animal(customType.empty() ? "Dog" : customType) {
+Dog:: Dog(std::string customType) : AAnimal(customType.empty() ? "Dog" : customType) {
 	std::cout << "Dog -set type- constructor called" <<  std::endl;
 }
 

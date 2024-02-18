@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:30:35 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/18 16:00:38 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/18 16:34:42 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Cat::Cat() {
 	_catIdeas = new Brain;
 }
 
-Cat:: Cat(std::string customType) : Animal(customType.empty() ? "Cat" : customType) {
+Cat:: Cat(std::string customType) : AAnimal(customType.empty() ? "Cat" : customType) {
 	std::cout << "Cat -set type- constructor called" <<  std::endl;
 }
 

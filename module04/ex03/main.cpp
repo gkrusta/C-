@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongWrongCat.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/16 14:16:05 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 14:25:38 by gkrusta          ###   ########.fr       */
+/*   Created: 2024/02/18 17:00:12 by gkrusta           #+#    #+#             */
+/*   Updated: 2024/02/18 17:00:26 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WRONGCAT_HPP
-#define WRONGCAT_HPP
-
-# include "WrongAnimal.hpp"
-
-class	WrongCat : public    WrongAnimal
+int main()
 {
-	public:
-		WrongCat();
-		WrongCat(std::string& customType);
-		~WrongCat();
-		WrongCat(const WrongCat& other);
-		WrongCat&	operator=(const WrongCat& other);
-		void	makeSound() const;
-};
-
-#endif
+	IMateriaSource* src = new MateriaSource();
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	ICharacter* me = new Character("me");
+	AMateria* tmp;
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	ICharacter* bob = new Character("bob");
+	me->use(0, *bob);
+	me->use(1, *bob);
+	delete bob;
+	delete me;
+	delete src;
+	return 0;
+}

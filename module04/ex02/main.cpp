@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/18 16:30:40 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/18 16:45:04 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main()
 {
 	std::cout << "===== Creating Dogs and Cats =====" << std::endl;
 	int	arrSize = 4;
-	Animal*	animals[arrSize];
+	AAnimal*	animals[arrSize];
 	
 	for (int i = 0; i < arrSize; i++) {
 		if (i < arrSize / 2)
@@ -37,10 +37,13 @@ int	main()
 	std::cout << "\n===== Testing deep copies of the objects =====" << std::endl;
 	Cat	original;
 	original.newIdea("Original idea");
-	Cat	copy = original;
+	Cat	copy(original);
 	copy.newIdea("Added second idea");
 	original.printIdeas();
 	copy.printIdeas();
+
+	//error: allocating an object of abstract class type 'AAnimal'
+	//AAnimal	*corpse = new AAnimal();
 
 	std::cout << "\n===== Making sounds and destorying instances =====" << std::endl;
 	for (int i = 0; i < arrSize; i++) {
