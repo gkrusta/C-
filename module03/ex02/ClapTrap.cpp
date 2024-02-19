@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:19 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:52:02 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:48:10 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,14 +49,12 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other) {
 }
 
 void	ClapTrap::attack(const std::string& target) {
-	if (this->_energyPoints > 0 && this->_attackPoints <= this->_hitPoints && this->_energyPoints > 0) {
+	if (this->_energyPoints > 0 && this->_hitPoints > 0) {
 		this->_energyPoints--;
 		std::cout << this->_name << " attacks " << target << " causing " << this->_attackPoints << " points of damage!" << std::endl;
 	}
-	else {
-		this->_hitPoints = 0;
+	else
 		std::cout << this->_name << " can't atack having no lives and/or no energy :(" << std::endl;
-	}
 }
 
 void	ClapTrap::takeDamage(unsigned int amount) {
@@ -64,7 +62,7 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 		this->_hitPoints -= amount;
 		std::cout << this->_name << " takes damage losing " << amount << " points!" << std::endl;
 	}
-	else if (this->_hitPoints == 0 && this->_energyPoints == 0) {
+	else if (this->_hitPoints == 0 || this->_energyPoints == 0) {
 		std::cout << this->_name << " can't take damage having no lives and/or no energy :(" << std::endl;
 	}
 	else {
@@ -74,11 +72,11 @@ void	ClapTrap::takeDamage(unsigned int amount) {
 }
 
 void	ClapTrap::beRepaired(unsigned int amount) {
-	if (this->_energyPoints > 0) {
+	if (this->_energyPoints > 0 && this->_hitPoints > 0) {
 		this->_energyPoints--;
 		this->_hitPoints += amount;
 		std::cout << this->_name << " repaired it's lives for " << amount << " now having " << this->_hitPoints << std::endl;
 	}
 	else
-		std::cout << this->_name << " can't repair having no energy :(" << std::endl;
+		std::cout << this->_name << " can't repair having no lives and/or no energy :(" << std::endl;
 }

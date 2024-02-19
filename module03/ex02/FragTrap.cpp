@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:06:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:15:53 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:38:20 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,15 @@ FragTrap& FragTrap::operator=(const FragTrap& other) {
 	}
 	std::cout << "FragTrap copy assignment operator called" << std::endl;
 	return *this;
+}
+
+void	FragTrap::attack(const std::string& target) {
+	if (this->_energyPoints > 0 && this->_hitPoints > 0) {
+		this->_energyPoints--;
+		std::cout << "FragTrap " << this->_name << " attacks " << target << " causing " << this->_attackPoints << " points of damage!" << std::endl;
+	}
+	else
+		std::cout << "FragTrap " << this->_name << " can't atack having no lives and/or no energy :(" << std::endl;
 }
 
 FragTrap::~FragTrap(void) {

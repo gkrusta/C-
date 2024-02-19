@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:22:36 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:49:59 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,11 @@ int	main(void) {
 	std::cout << "\n===== Testing FragTrap =====" << std::endl;
 	FragTrap	humanB("Homer");
 	humanB.attack("Bart");
-	humanB.takeDamage(200);
 	humanB.beRepaired(2);
-	humanB.highFivesGuys();
+	humanB.takeDamage(200);
+	FragTrap	humanC;
+	humanC = humanB;
+	humanC.highFivesGuys();
+	humanC.attack("Bart");
 	return (0);
 }

@@ -1,4 +1,4 @@
-NAME = frag_trap
+NAME = diamond_trap
 
 CPP = c++
 CPPFLAGS = -Wall -Wextra -Werror -std=c++98

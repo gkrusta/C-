@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:26:55 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:32:57 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ int	main(void) {
 	std::cout << "\n===== Testing ScavTrap =====" << std::endl;
 	ScavTrap	robot("Robot");
 	robot.attack("Zombie");
-/* 	robot.takeDamage(50);
-	robot.takeDamage(60); */
+	robot.takeDamage(50);
+	robot.takeDamage(60);
 	robot.takeDamage(1);
 	robot.beRepaired(2);
 

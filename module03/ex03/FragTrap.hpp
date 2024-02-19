@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:06:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 15:51:14 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:56:56 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class	FragTrap : public virtual ClapTrap
 		~FragTrap();
 		FragTrap(const FragTrap& other);
 		FragTrap&	operator=(const FragTrap& other);
+		void	attack(const std::string& target);
 		void	highFivesGuys(void);
 };
 

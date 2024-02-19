@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/12 16:40:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:30:37 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:59:19 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ int	main(void) {
 	DiamondTrap		humanA("Pablo");
 	DiamondTrap		humanB;
 	DiamondTrap		humanC(humanA);
-	humanA.attack("Enrique", "DiamondTrap");
-	humanB.takeDamage(1, "DiamondTrap");
-	humanB.beRepaired(5, "DiamondTrap");
+	humanA.attack("Enrique");
+	humanB.takeDamage(1);
+	humanB.beRepaired(5);
 	humanA.whoAmI();
 	humanB.whoAmI();
 	humanC.whoAmI();

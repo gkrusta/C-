@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:07:56 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/15 13:28:15 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:36:50 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,15 @@ ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
 	}
 	std::cout << "ScavTrap copy assignment operator called" << std::endl;
 	return *this;
+}
+
+void	ScavTrap::attack(const std::string& target) {
+	if (this->_energyPoints > 0 && this->_hitPoints > 0) {
+		this->_energyPoints--;
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackPoints << " points of damage!" << std::endl;
+	}
+	else
+		std::cout << "ScavTrap " << this->_name << " can't atack having no lives and/or no energy :(" << std::endl;
 }
 
 ScavTrap::~ScavTrap(void) {

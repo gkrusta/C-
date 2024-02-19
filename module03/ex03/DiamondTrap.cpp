@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:33:02 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 15:55:09 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:58:09 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 	_name = "Unknown";
 	ClapTrap::_name = "Unknown_clap_name";
 	_hitPoints = FragTrap::_hitPoints;
-	_type = "DiamondTrap";
 	_energyPoints = ScavTrap::_energyPoints;
 	_attackPoints = FragTrap::_attackPoints;
 	std::cout << "DiamondTrap default constructor called" << std::endl;
@@ -25,7 +24,6 @@ DiamondTrap::DiamondTrap() : ScavTrap(), FragTrap() {
 DiamondTrap::DiamondTrap(std::string name) : ScavTrap(), FragTrap() {
 	_name = name;
 	ClapTrap::_name = name + "_clap_name";
-	_type = "DiamondTrap";
 	_hitPoints = FragTrap::_hitPoints;
 	_energyPoints = ScavTrap::_energyPoints;
 	_attackPoints = FragTrap::_attackPoints;
@@ -61,6 +59,6 @@ void	DiamondTrap::whoAmI(void) {
 	std::cout << "DiamondTrap name: " << _name << "    ClapTrap name: " << ClapTrap::_name << std::endl;
 }
 
-void	DiamondTrap::attack(const std::string& target, std::string type) {
-	ScavTrap::attack(target, type);
+void	DiamondTrap::attack(const std::string& target) {
+	ScavTrap::attack(target);
 }

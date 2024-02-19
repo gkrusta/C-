@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 12:08:08 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 15:51:11 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:56:37 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class	ScavTrap : public virtual ClapTrap
 		~ScavTrap();
 		ScavTrap(const ScavTrap& other);
 		ScavTrap&	operator=(const ScavTrap& other);
+		void	attack(const std::string& target);
 		void	guardGate();
 };
 

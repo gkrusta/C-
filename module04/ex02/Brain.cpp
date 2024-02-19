@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/16 16:41:28 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/18 14:33:31 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 12:14:08 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ Brain::Brain(const Brain& other) {
 }
 
 Brain& Brain::operator=(const Brain& other) {
-	for (int i = 0; i < other._ideaCount; i++) 
+	for (int i = 0; i < other._ideaCount; i++)
 		_ideas[i] = other._ideas[i];
 	_ideaCount = other._ideaCount;
 	std::cout << "Brain copy assignment operator called" << std::endl;
