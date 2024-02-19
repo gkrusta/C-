@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:21:04 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 14:35:17 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 17:13:02 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Cure : public AMateria
 		Cure();
 		~Cure();
 		Cure* clone() const;
-		void use(ICharacter& target);
+		void	use(ICharacter& target);
 };
 
 #endif

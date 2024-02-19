@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:21:06 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 14:34:00 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/19 18:57:20 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ Cure* clone() const {
 }
 
 void	Cure::use(ICharacter& target) {
-	std::cout << "* heals " _type.getName() "'s wounds *" << std::endl;
+	std::cout << "* heals " _type->getName() "'s wounds *" << std::endl;
 }
 
 Cure::~Cure () {
