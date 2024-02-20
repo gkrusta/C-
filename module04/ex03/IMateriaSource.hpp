@@ -6,14 +6,12 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:20:53 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 18:04:41 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/20 10:57:56 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // IMateriaSource class defines a set of virtual functions
 // that any derived class must implement
-
-#include "AMateria.hpp"
 
 class IMateriaSource
 {
