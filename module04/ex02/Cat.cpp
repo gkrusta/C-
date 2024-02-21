@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/15 19:30:35 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 12:19:15 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/21 15:31:56 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Cat& Cat::operator=(const Cat& other) {
 	if (this != &other) {
 		_type = other._type;
 		delete _catIdeas;
-		_catIdeas = new Brain(*other._catIaqdeas);
+		_catIdeas = new Brain(*other._catIdeas);
 	}
 	std::cout << "Cat copy assignment operator called" << std::endl;
 	return *this;

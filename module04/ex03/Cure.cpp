@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:21:06 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 18:57:20 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/21 15:23:49 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,21 @@ Cure::Cure() : AMateria("cure"){
 	std::cout << "Cure default constructor called" <<  std::endl;
 }
 
-Cure* clone() const {
+Cure::Cure(const Cure& other) : AMateria("cure") {
+	(void)other;
+}
+
+Cure&	Cure::operator=(const Cure& other) {
+	(void)other;
+	return *this;
+}
+
+AMateria* Cure::clone() const {
 	return new Cure(*this);
 }
 
 void	Cure::use(ICharacter& target) {
-	std::cout << "* heals " _type->getName() "'s wounds *" << std::endl;
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
 }
 
 Cure::~Cure () {

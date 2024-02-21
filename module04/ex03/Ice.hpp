@@ -6,23 +6,24 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:20:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/19 17:13:53 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/21 15:21:54 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ICE_HPP
 #define ICE_HPP
 
-# include <iostream>
 # include "AMateria.hpp"
-# include "ICharacter.hpp"
+# include "Character.hpp"
 
 class Ice : public AMateria
 {
 	public:
 		Ice();
 		~Ice();
-		Ice* clone() const;
+		Ice(const Ice& other);
+		Ice& operator=(const Ice& other);
+		AMateria* clone() const;
 		void	use(ICharacter& target);
 };
 
