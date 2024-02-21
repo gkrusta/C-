@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 15:06:46 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/16 16:30:55 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/21 17:14:44 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal() {
 	_type = "Animal";
-	std::cout << "type is:" <<  _type << "Animal default constructor called" <<  std::endl;
+	std::cout << "Animal default constructor called" <<  std::endl;
 }
 
 Animal::Animal(std::string type) {

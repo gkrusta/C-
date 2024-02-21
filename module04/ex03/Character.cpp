@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 13:20:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/21 14:45:28 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/21 17:14:28 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,10 +98,4 @@ Character::~Character() {
 	for (int i = 0; i < 4; i++)
 			delete _inventory[i];
 	std::cout << "Character destructor called" << std::endl;
-	for (int i = 0; i < _droppedCount; i++)
-		delete _droppedMaterias[i];
-	if (_droppedCount > 0) {
-		std::cout << "- Materias left on the floor have been cleaned -" << std::endl;
-		_droppedCount = 0;
-	}
 }
