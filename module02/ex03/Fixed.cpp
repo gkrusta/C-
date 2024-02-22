@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 16:45:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/12 12:31:46 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/22 13:13:27 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ float	Fixed::toFloat(void) const {
 std::ostream	&operator<<(std::ostream& out, const Fixed& fixed) {
 	out << fixed.toFloat();
 	return (out);
-}
+} 
 
 bool	Fixed::operator>(const Fixed& other) const {
 	return (this->_rawBits > other._rawBits);
