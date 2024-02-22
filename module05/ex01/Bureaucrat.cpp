@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:01:15 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/22 15:05:47 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/22 16:30:32 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other) {
 	return *this;
 }
 
-const std::string	Bureaucrat::getName() const {
+const std::string 	Bureaucrat::getName() const {
 	return (_name);
 }
 
@@ -58,31 +58,44 @@ int	Bureaucrat::getGrade() const {
 	return (_grade);
 }
 
-void	Bureaucrat::incrementGrade(unsigned int incr) {
+void	Bureaucrat::incrementGrade() {
 	try
 	{
-		if (_grade - incr < 1)
+		if (_grade == 1)
 			throw Bureaucrat::GradeTooHighException();
 		else
-			_grade -= incr;
+			_grade -= 1;
 	}
 	catch (const std::exception & e) {
 		std::cerr << "Exception while incrementing: " << e.what() << std::endl;
 	}
 }
 
-void	Bureaucrat::decrementGrade(unsigned int decr) {
+void	Bureaucrat::decrementGrade() {
 	try
 	{
-		if (_grade + decr > 150)
+		if (_grade == 150)
 			throw Bureaucrat::GradeTooLowException();
 		else
-			_grade += decr;
+			_grade += 1;
 	}
 	catch (const std::exception & e) {
 		std::cerr << "Exception while decrementing: " << e.what() << std::endl;
 	}
 }
+
+void	Bureaucrat::signForm(Form& form) {
+	try
+	{
+		form.beSigned(*this);
+		std::cout << getName() << " signed " << form.getForm() << std::endl;
+	}
+	catch (std::string & e)
+	{
+		std::cout << getName() << " couldn’t sign " << form.getForm() << " because " << e.what() << "." << std::endl;
+	}
+}
+
 
 std::ostream	&operator<<(std::ostream& out, Bureaucrat& person) {
 	out << person.getName() << ", bureaucrat grade " << person.getGrade() << std::endl;
