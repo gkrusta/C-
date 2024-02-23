@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:01:48 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/23 13:45:43 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/23 15:22:17 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include <iostream>
 # include <exception>
-#include "Form.hpp"
+#include "AForm.hpp"
 
 class Form;
 
