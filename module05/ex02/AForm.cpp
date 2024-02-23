@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:09:29 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/23 13:14:11 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/23 13:14:22 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,6 @@ int	Form::getGradeToExecute() const {
 std::ostream& operator<<(std::ostream& out, Form& form) {
 	out << "Form Name: " << form.getForm() << "\nGrade to Sign: " << form.getGradeToSign()
 		<< "\nRequired Grade to Execute: " << form.getGradeToExecute() << std::endl;
-	out << "Signed status: " << (form.getFirmedForm() ? "true" : "false") << std::endl;
+	out << "Signed: " << (form.getFirmedForm() ? "true" : "false") << std::endl;
 	return out;
 }
