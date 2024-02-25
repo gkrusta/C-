@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:51:55 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/25 17:38:55 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/25 18:34:16 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const& executor) const {
 		else if (executor.getGrade() > getGradeToExecute())
 			throw AForm::GradeTooLowException();
 		else {
-			std::ofstream	outfile = ((this->getTarget() + "_shrubbery").c_str());
+			std::ofstream	outfile = ((getTarget() + "_shrubbery").c_str());
 			if (outfile.is_open()) {
 				std::cout << "       . . .\n";
 				std::cout << "       .        .  .     ..    .\n";

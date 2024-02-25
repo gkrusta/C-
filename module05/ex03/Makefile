@@ -1,9 +1,9 @@
-NAME = Bureaucrat
+NAME = Intern
 
 CPP = c++
-CPPFLAGS = -Wall -Wextra -Werror -std=c++98
+CPPFLAGS = -Wall -Wextra -Werror -std=c++98 -fsanitize=address
 
-SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp \
+SRC = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp Intern.cpp \
 	#ShrubberyCreationForm.cpp
 
 OBJ = $(SRC:.cpp=.o)
