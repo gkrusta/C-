@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:03:26 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/22 15:07:38 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:39:53 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ int	main(void) {
 	Bureaucrat	personB("Davyd", 1);
 	personB.incrementGrade(1);
 	std::cout << personB;
-	personA.decrementGrade(149);
-	std::cout << personA;
+	personB.decrementGrade(150);
+	std::cout << personB;
 
 	std::cout << "\n=== ASIGNMENT OVERLOAD ===" << std::endl;
 	personB = personA;

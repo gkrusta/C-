@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/25 18:31:04 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/25 19:32:47 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:50:58 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,26 +30,26 @@ Intern & Intern::operator=(const Intern & other) {
 }
 
 AForm*	Intern::makeForm(std::string name, std::string target) {
-	std::string forms[2] = {"RobotomyRequestForm", "PresidentialPardonForm"};
+	std::string forms[3] = {"shrubbery request", "robotomy request", "presidential request"};
 	int	i = 0;
 	AForm* ptr = nullptr;
-	while (i < 2 && forms[i] != name)
+	while (i < 3 && forms[i] != name)
 		i++;
 	switch (i) {
-/* 		case 0:
-			std::cout << "Intern creates form: " << name << std::endl;
-			ptr = new ShrubberyCreationForm(target);
-			return ptr; */
 		case 0:
 			std::cout << "Intern creates form: " << name << std::endl;
-			ptr = new RobotomyRequestForm(target);
+			ptr = new ShrubberyCreationForm(target);
 			return ptr;
 		case 1:
 			std::cout << "Intern creates form: " << name << std::endl;
-			ptr = new PresidentialPardonForm(target);
+			ptr = new RobotomyRequestForm(target);
 			return ptr;
 		case 2:
-			std::cout << "Error: Unknown form name: " << name << std::endl;
+			std::cout << "Intern creates form: " << name << std::endl;
+			ptr = new PresidentialPardonForm(target);
+			return ptr;
+		case 3:
+			std::cout << "Error: Unknown form name!" << std::endl;
 	}
 	return ptr;
 }

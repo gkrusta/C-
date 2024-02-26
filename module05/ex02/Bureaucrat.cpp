@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:01:15 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/25 18:14:03 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:42:57 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name) {
 	catch (std::exception & e)
 	{
 		std::cerr << "Exception:" << e.what() << std::endl;
-		std::exit(EXIT_FAILURE);
 	}
 }
 
@@ -69,7 +68,6 @@ void	Bureaucrat::incrementGrade() {
 	}
 	catch (const std::exception & e) {
 		std::cerr << "Exception while incrementing: " << e.what() << std::endl;
-		std::exit(EXIT_FAILURE);
 	}
 }
 
@@ -83,7 +81,6 @@ void	Bureaucrat::decrementGrade() {
 	}
 	catch (const std::exception & e) {
 		std::cerr << "Exception while decrementing: " << e.what() << std::endl;
-		std::exit(EXIT_FAILURE);
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 10:03:26 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/23 13:12:56 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:32:12 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ int	main(void) {
 	std::cout << quiz;
 	
 	std::cout << "\n=== INVALID FORM ===" << std::endl;
-	Form	newForm("Invalid Quiz", 0, 10);
-	personA.signForm(newForm);
+	Form	newForm("Invalid Quiz", 0, 20);
 	std::cout << newForm;
-	
+	personA.signForm(newForm);
+
 	return (0);
 }

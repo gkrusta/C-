@@ -26,7 +26,6 @@ AForm::AForm(std::string target, std::string form, int gradeToSign, int gradeToE
 	catch (std::exception & e)
 	{
 		std::cerr << "AForm is not valid: " << e.what() << std::endl;
-		std::exit(EXIT_FAILURE);
 	}
 }
 
@@ -48,7 +47,9 @@ AForm& AForm::operator=(const AForm& other) {
 
 // important to receive refernce (Bureaucrat&) to work directly with the original object
 void	AForm::beSigned(const Bureaucrat& person) {
-	if (person.getGrade() <= getGradeToSign())
+	if (getGradeToSign() < 1 || person.getGrade() < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (person.getGrade() <= getGradeToSign())
 		_signed = true;
 	else
 		throw AForm::GradeTooLowException();

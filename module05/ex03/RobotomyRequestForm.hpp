@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:53:23 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/25 18:30:08 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 11:01:11 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <iostream>
 # include <exception>
 # include "Bureaucrat.hpp"
-# include <cstdlib>  // for srand() function
+# include <cstdlib>
 
 class	Bureaucrat;
 

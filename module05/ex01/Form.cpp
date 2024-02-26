@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/22 15:09:29 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/23 13:14:11 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 12:31:22 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ Form::Form(const std::string form, const int gradeToSign, const int gradeToExecu
 	catch (std::exception & e)
 	{
 		std::cerr << "Form is not valid: " << e.what() << std::endl;
-		std::exit(EXIT_FAILURE);
 	}
 }
 
@@ -48,7 +47,9 @@ Form& Form::operator=(const Form& other) {
 
 // important to receive refernce (Bureaucrat&) to work directly with the original object
 void	Form::beSigned(const Bureaucrat& person) {
-	if (person.getGrade() <= getGradeToSign())
+	if (getGradeToSign() < 1 || person.getGrade() < 1)
+		throw Bureaucrat::GradeTooHighException();
+	else if (person.getGrade() <= getGradeToSign())
 		_signed = true;
 	else
 		throw Form::GradeTooLowException();

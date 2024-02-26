@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/23 14:51:55 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/25 18:34:16 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/26 10:19:22 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,29 +40,29 @@ void	ShrubberyCreationForm::execute(Bureaucrat const& executor) const {
 		else if (executor.getGrade() > getGradeToExecute())
 			throw AForm::GradeTooLowException();
 		else {
-			std::ofstream	outfile = ((getTarget() + "_shrubbery").c_str());
+			std::ofstream	outfile(getTarget() + "_shrubbery");
 			if (outfile.is_open()) {
-				std::cout << "       . . .\n";
-				std::cout << "       .        .  .     ..    .\n";
-				std::cout << "    .                 .         .  .\n";
-				std::cout << "                    .\n";
-				std::cout << "                   .                ..\n";
-				std::cout << "   .          .            .              .\n";
-				std::cout << "   .            '.,        .               .\n";
-				std::cout << "   .              'b      *\n";
-				std::cout << "    .              '$    #.                ..\n";
-				std::cout << "   .    .           $:   #:               .\n";
-				std::cout << " ..      .  ..      *#  @):        .   . .\n";
-				std::cout << "              .     :@,@):   ,.**:'   .\n";
-				std::cout << "  .      .,         :@@*: ..**'      .   .\n";
-				std::cout << "           '#o.    .:(@'.@*\"'  .\n";
-				std::cout << "   .  .       'bq,..:,@@*'   ,*      .  .\n";
-				std::cout << "              ,p$q8,:@)'  .p*'      .\n";
-				std::cout << "       .     '  . '@@Pp@@*'    .  .\n";
-				std::cout << "        .  . ..    Y7'.'     .  .\n";
-				std::cout << "                  :@):\n";
-				std::cout << "                 .:@:'.\n";
-				std::cout << "               .::(@:.      \n";
+				outfile << "       . . .\n";
+				outfile << "       .        .  .     ..    .\n";
+				outfile << "    .                 .         .  .\n";
+				outfile << "                    .\n";
+				outfile << "                   .                ..\n";
+				outfile << "   .          .            .              .\n";
+				outfile << "   .            '.,        .               .\n";
+				outfile << "   .              'b      *\n";
+				outfile << "    .              '$    #.                ..\n";
+				outfile << "   .    .           $:   #:               .\n";
+				outfile << " ..      .  ..      *#  @|:        .   . .\n";
+				outfile << "              .     :@,@|:   ,.**:'   .\n";
+				outfile << "  .      .,         :@@*: ..**'      .   .\n";
+				outfile << "           '#o.    .:(@'.@*\"'  .\n";
+				outfile << "   .  .       'bq,..:,@@*'   ,*      .  .\n";
+				outfile << "              ,p$q8,:@)'  .p*'      .\n";
+				outfile << "       .     '  . '@@Pp@@*'    .  .\n";
+				outfile << "        .  . ..    Y7'.'     .  .\n";
+				outfile << "                  :@|:\n";
+				outfile << "                 .:@:'.\n";
+				outfile << "               .::|@:.      \n";
 				outfile.close();
 				std::cout << "Check the created file! " << std::endl;
 			}
