@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:19:16 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/27 16:25:03 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/02/28 11:07:29 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 #define SERIALIZER_HPP
 
 # include <iostream>
+# include <cstdint> // for uintptr_t
+# include "Data.hpp"
+
+class	Data;
 
 class	Serializer {
 	public:
