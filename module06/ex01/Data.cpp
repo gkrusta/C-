@@ -39,5 +39,5 @@ Data& Data::operator=(const Data& other) {
 }
 
 void	Data::displayData(void) {
-	std::cout << "data is: " << data << std::cout;
+	std::cout << "data is: " << _nb << std::endl;
 }

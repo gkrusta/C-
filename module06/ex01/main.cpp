@@ -20,7 +20,7 @@ int	main(void) {
 
 	Data*	nbPtr = Serializer::deserialize(nbRaw);
 	
-	nbRaw.display();
-	nbPtr->dispaly();
+	nb.displayData();
+	nbPtr->displayData();
 	return (0);
 }
