@@ -27,6 +27,13 @@ void	testCreateArray() {
 	for (unsigned int i = 0; i < arr.size(); i++) {
 		std::cout << arr[i] << "  ";
 	}
+	std::cout << "\n\nAccessing value out of bounds arr[10]: " << std::endl;
+	try {
+		std::cout << arr[10] << std::endl;
+	} catch (std::exception &e)
+	{
+		std::cout << "Exception: " << e.what() << std::endl;
+	}
 }
 
 void	testCopyConstructor() {
@@ -53,7 +60,7 @@ void	testCopyConstructor() {
 }
 
 void	testCopyAssignation() {
-	std::cout << "\n--- COPY CONSTRCTOR ASSIGNATION ---" << std::endl;
+	std::cout << "\n--- COPY ASSIGNATION ---" << std::endl;
 	Array<char>	arr(2);
 
 	arr[0] = 'a';
