@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:14:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/27 16:14:24 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/04/07 13:15:59 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,15 @@ void	ScalarConverter::convert(const std::string& str) {
 
 	if (str.length() == 1 && isprint(str[0]) && !isdigit(str[0]))
 		c = str[0];
+	else if ((isprint(str[0]) && !isdigit(str[0]) && isprint(str[1]) &&
+		str != "nan" && str != "+inf" && str != "-inf" && 
+			str != "nanf" && str != "+inff" && str != "-inff") || str == "") {
+			std::cout << "char: impossible" << std::endl;
+			std::cout << "int: impossible" << std::endl;
+			std::cout << "double: impossible" << std::endl;
+			std::cout << "float: impossible" << std::endl;
+		return;
+	}
 	else if (str[str.length() - 1] == 'f' && str.find('.') != std::string::npos)
 		f = std::stof(str.c_str());
 	else if (str.find('.') != std::string::npos)
@@ -65,7 +74,8 @@ void	ScalarConverter::convert(const std::string& str) {
 		d = static_cast<double>(i);
 		f = static_cast<float>(i);
 	}
-	else if (f != 0 || d != 0){
+	else if (f != 0 || d != 0) {
+			std::cout << "HEY " << std::endl;
 		if (f != 0) {
 			i = static_cast<int>(f);
 			d = static_cast<double>(f);
