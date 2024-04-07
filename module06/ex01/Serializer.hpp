@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:19:16 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/28 11:07:29 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/04/07 13:33:02 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class	Serializer {
 	private:
 		Serializer();
 		~Serializer();
+		Serializer&	operator=(Serializer& other);
+		Serializer(Serializer& other);
 };
 
 #endif

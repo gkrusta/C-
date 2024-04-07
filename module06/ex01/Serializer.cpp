@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:19:14 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/02/28 11:14:07 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/04/07 13:32:35 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,15 @@ Serializer::Serializer() {
 }
 
 Serializer::~Serializer() {
+}
+
+Serializer::Serializer(Serializer& other) {
+	*this = other;
+}
+
+Serializer&	Serializer::operator=(Serializer& other) {
+	(void)other;
+	return *this;
 }
 
 // uintptr_t as the intermediate type to hold the integer representation of the pointer
