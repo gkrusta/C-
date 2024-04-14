@@ -6,7 +6,7 @@
 /*   By: gkrusta <gkrusta@student.42malaga.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/26 13:14:57 by gkrusta           #+#    #+#             */
-/*   Updated: 2024/04/07 13:15:59 by gkrusta          ###   ########.fr       */
+/*   Updated: 2024/04/10 17:37:20 by gkrusta          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,6 @@ void	ScalarConverter::convert(const std::string& str) {
 		f = static_cast<float>(i);
 	}
 	else if (f != 0 || d != 0) {
-			std::cout << "HEY " << std::endl;
 		if (f != 0) {
 			i = static_cast<int>(f);
 			d = static_cast<double>(f);
