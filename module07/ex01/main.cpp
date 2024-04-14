@@ -9,20 +9,20 @@ int	main( void ) {
 		std::cout << arrInt[i] << "  ";
 	}
 	iter<int>(arrInt, sizeof(arrInt) / sizeof(arrInt[0]), substractOne<int>);
-	std::cout << "\nAfter iter(): " << std::endl;
+	std::cout << "\nsubstractOne()...\n After iter(): " << std::endl;
 	for (size_t i = 0; i < sizeof(arrInt) / sizeof(arrInt[0]); i++) {
 		std::cout << arrInt[i] << "  ";
 	}
 
 	std::cout << "\n\n--- CHAR ARRAY ---" << std::endl;
-	char arrChar[] = {'a', 'b', 'z', '1'};
+	char arrChar[] = {'a', 'B', 'z', '1'};
 
 	std::cout << "Before iter(): " << std::endl;
 	for (size_t i = 0; i < sizeof(arrChar) / sizeof(arrChar[0]); i++) {
 		std::cout << arrChar[i] << "  ";
 	}
 	iter<char>(arrChar, sizeof(arrChar) / sizeof(arrChar[0]), addOne<char>);
-	std::cout << "\nAfter iter(): " << std::endl;
+	std::cout << "\naddOne()...\nAfter iter(): " << std::endl;
 	for (size_t i = 0; i < sizeof(arrChar) / sizeof(arrChar[0]); i++) {
 		std::cout << arrChar[i] << "  ";
 	}

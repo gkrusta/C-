@@ -49,7 +49,7 @@ void	testCopyConstructor() {
 	std::cout << std::endl;
 
 	Array<int>	arr2(arr);
-	std::cout << "array2: " << std::endl;
+	std::cout << "array2: ";
 	for (unsigned int i = 0; i < arr.size(); i++) {
 		std::cout << arr2[i] << "  ";
 	}
