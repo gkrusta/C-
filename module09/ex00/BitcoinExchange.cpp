@@ -1,4 +1,4 @@
-#include "BitcoinExchange"
+#include "BitcoinExchange.hpp"
 
 BitcoinExchange::BitcoinExchange() {
 	std::cout << "BitcoinExchange default constructor called" <<  std::endl;
@@ -20,6 +20,18 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
 	return *this;
 }
 
+void	BitcoinExchange::getExcahngeRate(std::string date, float &value) {
+	float result;
+	std::map<std::string, float>::iterator it = _exchangeRate.find(date);
+
+	if (it != _exchangeRate.end())
+		result = it->second * value;
+	else
+		result = value;
+	std::cout << date << " => " << value << " = " << //result << std::endl;
+
+}
+
 bool	BitcoinExchange::LoadExchangeRate(const std::string& fileName) {
 	std::ifstream	file(fileName);
 	std::string	line;
@@ -29,15 +41,14 @@ bool	BitcoinExchange::LoadExchangeRate(const std::string& fileName) {
 		return false;
 	
 	while (std::getline(file, line)) {
-		std::istringstream	iss;
+		std::istringstream	iss(line);
 		std::string	date, exchange_rate;
-
 		if (firstLine) {
 			firstLine = false;
 			continue;
 		}
-		if (std::getline(iss, date, ",") && std::getline(iss, exchange_rate))
-			_exchangeRate[date] = exchange_rate;
+		if (std::getline(iss, date, ',') && std::getline(iss, exchange_rate))
+			_exchangeRate[date] = atof(exchange_rate.c_str());
 		else
 			return false;
 	}

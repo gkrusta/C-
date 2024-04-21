@@ -1,7 +1,7 @@
-#include "BitcoinExchange"
+#include "BitcoinExchange.hpp"
 
 bool	parseDate(std::string &line) {
-	if (line[4] != "-" || line[7] != "-")
+	if (line[4] != '-' || line[7] != '-')
 		return false;
 	for (int i = 0; i < 10; i++) {
 		if (i == 4 || i == 7)
@@ -25,7 +25,8 @@ int main(int argc, char **argv) {
 		return (1);
 	}
 	BitcoinExchange	bitcoin;
-	std::ifstream	inputFile(argv[1]);
+	std::string	 infileName = argv[1];
+	std::ifstream	inputFile(infileName);
 	std::string	line;
 
 	if (!bitcoin.LoadExchangeRate("data.csv") || !inputFile.is_open()) {
@@ -33,18 +34,28 @@ int main(int argc, char **argv) {
 		return (1);
 	}
 
+	bool firstLine = true;
 	while (std::getline(inputFile, line)) {
 		std::string	date, seperation, value;
-		std::istingstream	iss(line);
+		std::istringstream	iss(line);
 
-		if (iss >> date && iss >> seperation && iss >> value) {
-			if (!parseDate(data) || seperation != "|")
-				std::cout << "Error: bad input => " << data << std::endl;
-			else if (value < 0)
+		if (firstLine) {
+			if (line != "date | value") {
+				std::cout << "Error: wrong format in 1st line " << line << std::endl;
+				return (1);
+			}
+			firstLine = false;
+			continue;
+		}
+		if (iss >> date && iss >> seperation && iss >> value ) {
+			if (!parseDate(date) || seperation != "|")
+				std::cout << "Error: bad input => " << date << std::endl;
+			else if (atof(value.c_str()) < 0)
 				std::cout << "Error: not a positive number => " << value << std::endl;
-			else if (value > 2147483647)
+			else if (atof(value.c_str()) > 2147483647)
 				std::cout << "Error: too large a number => " << value << std::endl;
-				
+			else
+				bitcoin.getExcahngeRate(date, atof(value.c_str()));
 		}
 		else
 			std::cout << "Error: bad input => " << line << std::endl;
