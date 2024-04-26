@@ -1,6 +1,6 @@
 #include "easyfind.hpp"
 
-#define VALUE 3
+#define VALUE 6
 
 int	main(void) {
 	std::set<int>	set;

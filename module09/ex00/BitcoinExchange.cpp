@@ -20,15 +20,24 @@ BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
 	return *this;
 }
 
-void	BitcoinExchange::getExcahngeRate(std::string date, float &value) {
-	float result;
+void	BitcoinExchange::getExcahngeRate(std::string date, float value) {
+	std::string	closestDate = "";
+	float		currency;
 	std::map<std::string, float>::iterator it = _exchangeRate.find(date);
 
 	if (it != _exchangeRate.end())
-		result = it->second * value;
-	else
-		result = value;
-	std::cout << date << " => " << value << " = " << //result << std::endl;
+		currency = it->second;
+	else {
+		it = _exchangeRate.upper_bound(date);
+		if (it != _exchangeRate.begin())
+			--it;
+		currency = it->second;
+	}
+	std::ostringstream	stream1, stream2;
+	float result = currency * value;
+	stream1 << result;
+	stream2 << value;
+	std::cout << date << " => " << value << " = " << result << std::endl;
 
 }
 

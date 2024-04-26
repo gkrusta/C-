@@ -14,7 +14,7 @@ bool	parseDate(std::string &line) {
 	int month = (line[5] - '0') * 10 + (line[6] - '0');
 	int day = (line[8] - '0') * 10 + (line[9] - '0');
 
-	if (year < 0 || month < 1 || month > 12 || day < 1 || day > 31)
+	if (year < 1000 || month < 1 || month > 12 || day < 1 || day > 31)
 		return false;
 	return true;
 }
@@ -42,14 +42,14 @@ int main(int argc, char **argv) {
 		if (firstLine) {
 			if (line != "date | value") {
 				std::cout << "Error: wrong format in 1st line " << line << std::endl;
-				return (1);
+				return (0);
 			}
 			firstLine = false;
 			continue;
 		}
-		if (iss >> date && iss >> seperation && iss >> value ) {
+		if (iss >> date && iss >> seperation && iss >> value) {
 			if (!parseDate(date) || seperation != "|")
-				std::cout << "Error: bad input => " << date << std::endl;
+				std::cout << "Error: bad input => " << line << std::endl;
 			else if (atof(value.c_str()) < 0)
 				std::cout << "Error: not a positive number => " << value << std::endl;
 			else if (atof(value.c_str()) > 2147483647)
