@@ -14,7 +14,8 @@ class	RPN {
 		~RPN();
 		RPN(const RPN& other);
 		RPN& operator=(const RPN& other);
-		int	CalculateRPN(std::string &expression);
+		void	CalculateRPN(const std::string &expression);
+		void	ApplyOperation(char operation);
 
 	private:
 		std::deque<int> _stack;
