@@ -5,7 +5,7 @@ int	main(int argc, char **argv) {
 		std::cerr << "Error: Pass an expresion for example like this: 3 5 9 7 4" << std::endl;
 		return (1);
 	}
-	PmergeMe stack(argc, argv);
-
+	PmergeMe	stack(argc, argv);
+	stack.FordJohnsonMergeSort();
 	return (0);
 }
